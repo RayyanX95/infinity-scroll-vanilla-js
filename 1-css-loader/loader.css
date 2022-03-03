@@ -3,5 +3,20 @@
   height: 100px;
   display: block;
   margin: 140px auto;
+  animation-name: shape;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
+@keyframes shape {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  } 
+}
