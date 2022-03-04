@@ -42,13 +42,17 @@ const cardElement = (data) => (
 </div>`
 );
 
+//* `isGettingData` flag is used to prevent making API request while another is being sent
+let isGettingData = false;
 const getData = () => {
+  isGettingData = true;
   overlayLoader.classList.remove('d-none');
   const delay = (0.5 + Math.random() * 2) * 1000;
   return new Promise((resolve) => {
     setTimeout(function () {
       resolve(data);
       overlayLoader.classList.add('d-none');
+      isGettingData = false;
     }, delay);
   });
 }
@@ -59,12 +63,11 @@ const rendersCards = async () => {
     cardsContainer.insertAdjacentHTML('beforeend', cardElement(card))
   ));
 };
-
-// Check to see if scrolling near bottom of page; load more photos
 window.addEventListener('scroll', () => {
-  if (window.scrollY + window.innerHeight >= document.body.offsetHeight - 100) {
+  if ((window.scrollY + window.innerHeight >= document.body.offsetHeight - 100) && !isGettingData) {
     rendersCards();
   }
 });
 
+// call it here outside the scroll for the first load
 rendersCards();

@@ -43,13 +43,17 @@ const cardElement = (data) => (
 </div>`
 );
 
+//* `isGettingData` flag is used to prevent making API request while another is being sent
+let isGettingData = false;
 const getData = () => {
+  isGettingData = true;
   overlayLoader.classList.remove('d-none');
   const delay = (0.5 + Math.random() * 2) * 1000;
   return new Promise((resolve) => {
     setTimeout(function () {
       resolve(data);
       overlayLoader.classList.add('d-none');
+      isGettingData = false;
     }, delay);
   });
 }
@@ -60,14 +64,13 @@ const rendersCards = async () => {
     cardsContainer.insertAdjacentHTML('beforeend', cardElement(card))
   ));
 };
-
-// Check to see if scrolling near bottom of page; load more photos
 window.addEventListener('scroll', () => {
-  if (window.scrollY + window.innerHeight >= document.body.offsetHeight - 100) {
+  if ((window.scrollY + window.innerHeight >= document.body.offsetHeight - 100) && !isGettingData) {
     rendersCards();
   }
 });
 
+// call it here outside the scroll for the first load
 rendersCards();
 },{"./data":2}],2:[function(require,module,exports){
 const data = [
@@ -150,6 +153,76 @@ const data = [
     country: 'China',
     totalCapacity: 50,
     appliedCapacity: 40,
+  },
+  {
+    name: 'Dribble',
+    profileImage: "https://www.pngitem.com/pimgs/m/166-1667214_child-head-with-smiling-face-child-face-icon.png",
+    daysSinceApplied: 4,
+    tag: 'Product',
+    position: 'Junior Frontend Developer',
+    country: 'Singapore',
+    totalCapacity: 70,
+    appliedCapacity: 60,
+  },
+  {
+    name: 'Reddit',
+    profileImage: "https://www.pngitem.com/pimgs/m/166-1667214_child-head-with-smiling-face-child-face-icon.png",
+    daysSinceApplied: 2,
+    tag: 'Design',
+    position: 'Business Analyst',
+    country: 'USA',
+    totalCapacity: 100,
+    appliedCapacity: 52,
+  },
+  {
+    name: 'Ibrahim',
+    profileImage: "https://www.pngitem.com/pimgs/m/166-1667214_child-head-with-smiling-face-child-face-icon.png",
+    daysSinceApplied: 1,
+    tag: 'Development',
+    position: 'UX/UI Designer',
+    country: 'Singapore',
+    totalCapacity: 80,
+    appliedCapacity: 32,
+  },
+  {
+    name: 'Ahmed',
+    profileImage: "https://www.pngitem.com/pimgs/m/166-1667214_child-head-with-smiling-face-child-face-icon.png",
+    daysSinceApplied: 3,
+    tag: 'Product',
+    position: 'Senior Frontend Designer',
+    country: 'France',
+    totalCapacity: 80,
+    appliedCapacity: 60,
+  },
+  {
+    name: 'Sarah',
+    profileImage: "https://www.pngitem.com/pimgs/m/166-1667214_child-head-with-smiling-face-child-face-icon.png",
+    daysSinceApplied: 1,
+    tag: 'Design',
+    position: 'Senior Technical Requiter',
+    country: 'China',
+    totalCapacity: 50,
+    appliedCapacity: 40,
+  },
+  {
+    name: 'AlRayyan',
+    profileImage: "https://www.pngitem.com/pimgs/m/166-1667214_child-head-with-smiling-face-child-face-icon.png",
+    daysSinceApplied: 7,
+    tag: 'Design',
+    position: 'Senior Backend Developer',
+    country: '  Egypt',
+    totalCapacity: 60,
+    appliedCapacity: 55,
+  },
+  {
+    name: 'Reddit',
+    profileImage: "https://www.pngitem.com/pimgs/m/166-1667214_child-head-with-smiling-face-child-face-icon.png",
+    daysSinceApplied: 2,
+    tag: 'Design',
+    position: 'Business Analyst',
+    country: 'USA',
+    totalCapacity: 100,
+    appliedCapacity: 52,
   },
 ];
 
