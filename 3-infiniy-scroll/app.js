@@ -1,3 +1,5 @@
+const data = require('./data');
+
 const cardsContainer = document.querySelector('#cards-container');
 
 const cardElement = (data) => (
