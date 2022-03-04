@@ -2,6 +2,8 @@
 
 This repo is the solution of DXPR Senior Frontend Developer assessment that contains three tasks.
 
+*The solution is built using **vanilla JS**, **HTML**, **CSS** and **bootstrap** and without any dependencies or packages*
+
 ## Assessment Tasks
 1. CSS Loader 
 2. Bootstrap 5 Card
