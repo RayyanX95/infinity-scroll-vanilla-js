@@ -9,31 +9,31 @@ const cardElement = (data) => (
     <div class="row justify-content-between">
       <div class="d-flex col-auto">
         <div class="avatar-container bg-light">
-          <img src="https://www.pngitem.com/pimgs/m/166-1667214_child-head-with-smiling-face-child-face-icon.png" class="avatar" alt="">
+          <img src=${data.profileImage} class="avatar" alt="">
         </div>
         <div class="d-flex flex-column justify-content-between ms-3">
-          <h5>Machinmp</h5>
-          <h6 class="text-muted fw-normal">1 days ago</h6>
+          <h5>${data.name}</h5>
+          <h6 class="text-muted fw-normal">${data.daysSinceApplied} days ago</h6>
         </div>
       </div>
       <div class="col-auto">
-        <span class="orange-badge">Design</span>
+        <span class="orange-badge">${data.tag}</span>
       </div>
     </div>
 
     <div class="row my-5">
       <div class="col-10">
-        <h3 class="">Senior Product Designer-Singapore</h3>
+        <h3 class="">${data.position}-${data.country}</h3>
       </div>
     </div>
 
     <div class="row">
       <div class="col">
         <div class="progress">
-          <div class="progress-bar bg-danger" role="progressbar" style="width: 60%" aria-valuenow="75" aria-valuemin="0"
+          <div class="progress-bar bg-danger" role="progressbar" style="width: ${data.appliedCapacity / data.totalCapacity * 100}%" aria-valuenow="75" aria-valuemin="0"
             aria-valuemax="100"></div>
         </div>
-        <small class="fw-bold mb-0">32 Applied<span class="text-muted"> of 50 capacity</span></small>
+        <small class="fw-bold mb-0">${data.appliedCapacity} Applied<span class="text-muted"> of ${data.totalCapacity} capacity</span></small>
       </div>
     </div>
   </div>
@@ -59,7 +59,7 @@ const rendersCards = async () => {
 
 // Check to see if scrolling near bottom of page; load more photos
 window.addEventListener('scroll', () => {
-  if (window.scrollY + window.innerHeight >= document.body.offsetHeight - 1000) {
+  if (window.scrollY + window.innerHeight >= document.body.offsetHeight - 100) {
     rendersCards();
   }
 });
