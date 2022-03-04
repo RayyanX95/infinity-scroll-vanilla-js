@@ -7,9 +7,9 @@ const overlayLoader = document.querySelector('.overlay-loader');
 const cardElement = (data) => (
   `<div class=" col-md-4 mb-4">
   <div class="card">
-  <div class="card-body">
-    <div class="row justify-content-between">
-      <div class="d-flex col-auto">
+  <div class="row flex-column card-body">
+    <div class="col-auto d-flex justify-content-between">
+      <div class="d-flex">
         <div class="avatar-container bg-light">
           <img src=${data.profileImage} class="avatar" alt="">
         </div>
@@ -23,20 +23,16 @@ const cardElement = (data) => (
       </div>
     </div>
 
-    <div class="row my-5">
-      <div class="col-10">
-        <h3 class="">${data.position}-${data.country}</h3>
-      </div>
+    <div class="col my-5">
+      <h3 class="">${data.position}-${data.country}</h3>
     </div>
 
-    <div class="row">
-      <div class="col">
-        <div class="progress">
-          <div class="progress-bar bg-danger" role="progressbar" style="width: ${data.appliedCapacity / data.totalCapacity * 100}%" aria-valuenow="75" aria-valuemin="0"
-            aria-valuemax="100"></div>
-        </div>
-        <small class="fw-bold mb-0">${data.appliedCapacity} Applied<span class="text-muted"> of ${data.totalCapacity} capacity</span></small>
+    <div class="col-auto">
+      <div class="progress">
+        <div class="progress-bar bg-danger" role="progressbar" style="width: ${data.appliedCapacity / data.totalCapacity * 100}%" aria-valuenow="75" aria-valuemin="0"
+          aria-valuemax="100"></div>
       </div>
+      <small class="fw-bold mb-0">${data.appliedCapacity} Applied<span class="text-muted"> of ${data.totalCapacity} capacity</span></small>
     </div>
   </div>
   </div>

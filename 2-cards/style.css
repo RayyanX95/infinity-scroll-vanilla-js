@@ -7,6 +7,7 @@
   min-width: 12rem; 
   max-width: 26rem;
   margin: 0 auto; 
+  height: 100%;
 }
 
 .avatar-container {
