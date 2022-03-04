@@ -1,0 +1,17 @@
+.infinity-scroll-container {
+  position: relative
+}
+
+.overlay {
+  position: fixed;
+  border: 5px solid red;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(161, 161, 161, 0.582);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
