@@ -61,7 +61,7 @@ const rendersCards = async () => {
   ));
 };
 window.addEventListener('scroll', () => {
-  if ((window.scrollY + window.innerHeight >= document.body.offsetHeight - 100) && !isGettingData) {
+  if ((window.scrollY + window.innerHeight >= document.body.offsetHeight - 1000) && !isGettingData) {
     rendersCards();
   }
 });
