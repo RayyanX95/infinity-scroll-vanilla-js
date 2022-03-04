@@ -1,7 +1,7 @@
 const data = require('./data');
 
 const cardsContainer = document.querySelector('#cards-container');
-const overlayLoader = document.querySelector('.overlay');
+const overlayLoader = document.querySelector('.overlay-loader');
 
 const cardElement = (data) => (
   `<div class=" col-md-4 mb-4">
@@ -43,10 +43,12 @@ const cardElement = (data) => (
 );
 
 const getData = () => {
+  overlayLoader.classList.remove('d-none');
   const delay = (0.5 + Math.random() * 2) * 1000;
   return new Promise((resolve) => {
     setTimeout(function () {
       resolve(data);
+      overlayLoader.classList.add('d-none');
     }, delay);
   });
 }
