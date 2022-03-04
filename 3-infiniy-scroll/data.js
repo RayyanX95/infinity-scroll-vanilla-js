@@ -11,7 +11,7 @@ const data = [
   },
   {
     name: 'Dribble',
-    profileImage: "https://i.pinimg.com/236x/0a/2c/27/0a2c27a6a12ad00dcab815ded6654de7--racoon-zoo-book.jpg",
+    profileImage: "https://www.pngitem.com/pimgs/m/166-1667214_child-head-with-smiling-face-child-face-icon.png",
     daysSinceApplied: 4,
     tag: 'Product',
     position: 'Junior Frontend Developer',

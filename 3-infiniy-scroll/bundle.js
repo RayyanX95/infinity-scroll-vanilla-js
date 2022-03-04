@@ -102,7 +102,7 @@ const data = [
     appliedCapacity: 52,
   },
   {
-    name: 'Mailchimp',
+    name: 'Ibrahim',
     profileImage: "https://www.pngitem.com/pimgs/m/166-1667214_child-head-with-smiling-face-child-face-icon.png",
     daysSinceApplied: 1,
     tag: 'Development',
@@ -112,7 +112,7 @@ const data = [
     appliedCapacity: 32,
   },
   {
-    name: 'Mailchimp',
+    name: 'AlRayyan',
     profileImage: "https://www.pngitem.com/pimgs/m/166-1667214_child-head-with-smiling-face-child-face-icon.png",
     daysSinceApplied: 7,
     tag: 'Design',
@@ -122,7 +122,7 @@ const data = [
     appliedCapacity: 55,
   },
   {
-    name: 'Mailchimp',
+    name: 'Mohammed',
     profileImage: "https://www.pngitem.com/pimgs/m/166-1667214_child-head-with-smiling-face-child-face-icon.png",
     daysSinceApplied: 1,
     tag: 'Sales',
@@ -132,7 +132,7 @@ const data = [
     appliedCapacity: 44,
   },
   {
-    name: 'Mailchimp',
+    name: 'Ahmed',
     profileImage: "https://www.pngitem.com/pimgs/m/166-1667214_child-head-with-smiling-face-child-face-icon.png",
     daysSinceApplied: 3,
     tag: 'Product',
@@ -142,7 +142,7 @@ const data = [
     appliedCapacity: 60,
   },
   {
-    name: 'Mailchimp',
+    name: 'Sarah',
     profileImage: "https://www.pngitem.com/pimgs/m/166-1667214_child-head-with-smiling-face-child-face-icon.png",
     daysSinceApplied: 1,
     tag: 'Design',
