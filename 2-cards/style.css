@@ -2,9 +2,11 @@
 
 .card {
   background-color: white;
-  border-radius: 4px;
+  border-radius: 10px;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);
-  width: 24rem; 
+  min-width: 12rem; 
+  max-width: 26rem;
+  margin: 0 auto; 
 }
 
 .avatar-container {

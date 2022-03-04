@@ -2,9 +2,8 @@
   position: relative
 }
 
-.overlay {
+.overlay-loader {
   position: fixed;
-  border: 5px solid red;
   left: 0;
   top: 0;
   width: 100%;

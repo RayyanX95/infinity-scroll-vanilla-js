@@ -1,6 +1,7 @@
 const data = require('./data');
 
 const cardsContainer = document.querySelector('#cards-container');
+const overlayLoader = document.querySelector('.overlay');
 
 const cardElement = (data) => (
   `<div class=" col-md-4 mb-4">
