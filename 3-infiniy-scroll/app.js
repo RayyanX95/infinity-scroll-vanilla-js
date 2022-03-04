@@ -41,8 +41,18 @@ const cardElement = (data) => (
 </div>`
 );
 
-const rendersCards = () => {
-  [0, 1, 2, 3].map((card) => (
+const getData = () => {
+  const delay = (0.5 + Math.random() * 2) * 1000;
+  return new Promise((resolve) => {
+    setTimeout(function () {
+      resolve(data);
+    }, delay);
+  });
+}
+
+const rendersCards = async () => {
+  const data = await getData();
+  data.map((card) => (
     cardsContainer.insertAdjacentHTML('beforeend', cardElement(card))
   ));
 };
